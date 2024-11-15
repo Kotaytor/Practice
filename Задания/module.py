@@ -1,7 +1,6 @@
 import os
 from PIL import Image
 import datetime
-import json
 
 def get_image_info(image_path):
     try:
@@ -34,24 +33,7 @@ def get_user_input():
                 print("Ошибка: файл не найден")
         except Exception as e:
             print(f"Ошибка при вводе: {e}")
-
-def store_data(data):
-    try:
-        with open('data.json', 'w') as file:
-            json.dump(data, file)
-        print("Данные успешно сохранены")
-    except Exception as e:
-        print(f"Ошибка при сохранении данных: {e}")
-
-def load_data():
-    try:
-        with open('data.json', 'r') as file:
-            data = json.load(file)
-        return data
-    except Exception as e:
-        print(f"Ошибка при загрузке данных: {e}")
-        return {}
-
+            
 def main():
     image_path = get_user_input()
     image_info = get_image_info(image_path)
