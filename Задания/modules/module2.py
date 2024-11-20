@@ -36,8 +36,7 @@ def main():
     image_info = get_image_info(image_path)
     if image_info:
         print(f"Информация об изображении:")
-        print(f" Ширина: {image_info['width']}")
-        print(f" Высота: {image_info['height']}")
+        print(f" Размер файла: {image_info['file_size']} байт")
         print(f" Разрешение: {image_info['resolution']}")
         print(f" Дата создания: {image_info['date_created']}")
         new_name = input("Введите новое имя для изображения (если нужно переименовать): ")
